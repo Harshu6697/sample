@@ -1,0 +1,41 @@
+{
+	"name": "DestinationDataset_dtt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDWLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10,
+				"scale": 255
+			},
+			{
+				"name": "first_name",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "last_name",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "age",
+				"type": "int",
+				"precision": 10,
+				"scale": 255
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "demo1"
+		}
+	}
+}
