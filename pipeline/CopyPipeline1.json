@@ -39,12 +39,7 @@
 					},
 					"sink": {
 						"type": "SqlDWSink",
-						"allowPolyBase": true,
-						"polyBaseSettings": {
-							"rejectValue": 0,
-							"rejectType": "value",
-							"useTypeDefault": true
-						}
+						"allowPolyBase": false
 					},
 					"enableStaging": true,
 					"stagingSettings": {
@@ -108,7 +103,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_dtt",
+						"referenceName": "AzureSqlDWTableDS",
 						"type": "DatasetReference"
 					}
 				]

@@ -1,8 +1,8 @@
 {
-	"name": "AzureSqlDWTableDS",
+	"name": "AzureSqlDWTable1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDWsam",
+			"referenceName": "sampleLSddwh",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -31,6 +31,5 @@
 			"schema": "dbo",
 			"table": "demo1"
 		}
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }
