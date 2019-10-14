@@ -1,0 +1,36 @@
+{
+	"name": "AzureSqlDWTableDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDWLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "first_name",
+				"type": "varchar"
+			},
+			{
+				"name": "last_name",
+				"type": "varchar"
+			},
+			{
+				"name": "age",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "demo1"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
