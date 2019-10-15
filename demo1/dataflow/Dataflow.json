@@ -26,7 +26,7 @@
 					"name": "DataFilter"
 				}
 			],
-			"script": "\n\nsource(output(\n\t\tColumn_1 as integer,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string,\n\t\tColumn_4 as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipLines: 1) ~> source1\nsource1 filter(Column_4>50) ~> DataFilter\nDataFilter sink(input(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string,\n\t\tColumn_4 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> sink1"
+			"script": "\n\nsource(output(\n\t\tColumn_1 as integer,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string,\n\t\tColumn_4 as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipLines: 1) ~> source1\nsource1 filter(Column_4>50) ~> DataFilter\nDataFilter sink(input(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string,\n\t\tColumn_4 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\trowUrlColumn:'',\n\tpartitionBy('hash', 1)) ~> sink1"
 		}
 	}
 }
